@@ -28,7 +28,7 @@ I chose this problem for a few reasons. First, it is a tier-2 problem which goes
 
 [x] I can describe a concrete before-and-after: what the user sees before the fix and what they see after.
 
-[x] If this is my first open source contribution: I'm choosing Tier 1.
+[ ] If this is my first open source contribution: I'm choosing Tier 1.
 
 [x] If I've contributed to large codebases before: Tier 2 or 3 is fair game.
 
