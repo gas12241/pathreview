@@ -59,3 +59,17 @@ I chose this problem for a few reasons. First, it is a tier-2 problem which goes
 **Screenshot of Cohort Ledger**
 
 ![Screenshot of Cohort Ledger](cohort_ledger.png)
+
+## Week 8 — Reproduction & solution planning
+
+**Reproduction commit link:** https://github.com/gas12241/pathreview/commit/92d8914
+
+**Reproduction summary:**
+Wrote a test calling GitHubTool against the live GitHub API with no mocking. It passed, but confirmed the tool has no fixture-based path — every run consumes GitHub's unauthenticated rate limit (60 req/hour per IP, already at 57 remaining after a few manual checks), which is exactly why these tests can't run reliably in CI today.
+
+**PLAN.md link:** https://github.com/gas12241/pathreview/blob/test/57-mock-github-api/PLAN.md
+
+**Walkthrough video (recommended):** https://youtu.be/h86U--Vp6Yk
+
+**Blockers or open questions:**
+Going into week 9, I don't believe I have any blockers or open questions!
