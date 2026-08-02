@@ -73,3 +73,34 @@ Wrote a test calling GitHubTool against the live GitHub API with no mocking. It 
 
 **Blockers or open questions:**
 Going into week 9, I don't believe I have any blockers or open questions!
+
+## Week 9 — Solution building & PR submission
+
+### Check-in 1 (mid-week)
+
+**Current progress:**
+All 5 sub-tasks from PLAN.md are implemented. `GitHubTool` now takes an optional `base_url` constructor param (defaulting to the real API), so it can be pointed at a mock server. Added fixtures in `tests/fixtures/github_responses/` for a successful repo response, a 404, and a 403 rate-limit response. Rewrote `tests/integration/test_github_tool.py` to use `pytest-httpserver` instead of the live API, covering a successful fetch (with and without a README), repo-not-found, rate-limited, and malformed JSON — 5 tests, all passing with no network calls. Ran `make check` and `make test-unit` before and after the change and confirmed the pre-existing failures (53 unit test failures, 181 lint errors) are unchanged — no regressions introduced.
+
+**Next steps:**
+Open the PR, writing the description to document the pre-existing failures and confirm my changes don't affect them, then do a final self-review pass (`make check` / `make test-unit`) before requesting review.
+
+**Blockers:**
+None.
+
+---
+
+### Check-in 2 (end of week)
+
+**PR link:** [link to your submitted pull request]
+
+**Branch:** [the branch name you worked on, e.g. `fix/123-short-description`]
+
+**What you built:**
+[1–3 sentences summarizing what your fix does and how it works]
+
+**Tests added or updated:**
+[Which test files did you touch? What do they cover?]
+
+**Self-review confirmation:** [ ] make check passes [ ] make test-unit passes
+
+**Draft PR feedback received from:** [name or Slack handle, or "none"]
