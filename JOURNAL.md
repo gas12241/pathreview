@@ -104,4 +104,4 @@ Made `GitHubTool`'s `base_url` configurable via an optional constructor param (d
 **Self-review confirmation:** [x] make check passes [x] make test-unit passes
 (Both in the documented pre-existing-failures sense: 181 lint errors and 53 unit test failures are pre-existing on `main` and unrelated to this issue; my changes introduce zero new failures, confirmed via before/after comparison.)
 
-**Draft PR feedback received from:** none
+**Draft PR feedback received from:** I put my draft up and was not able to get any feedback. Given the deadline for this assignment, I had Claude double check the PR and opened it for review.
