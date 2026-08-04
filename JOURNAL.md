@@ -91,16 +91,17 @@ None.
 
 ### Check-in 2 (end of week)
 
-**PR link:** [link to your submitted pull request]
+**PR link:** https://github.com/ascherj/pathreview/pull/552
 
-**Branch:** [the branch name you worked on, e.g. `fix/123-short-description`]
+**Branch:** test/57-mock-github-api
 
 **What you built:**
-[1–3 sentences summarizing what your fix does and how it works]
+Made `GitHubTool`'s `base_url` configurable via an optional constructor param (defaulting to the real GitHub API), then replaced the live-API integration test with a local `pytest-httpserver` mock serving fixture responses from `tests/fixtures/github_responses/`. This lets the GitHub tool tests run deterministically in CI without network access or hitting GitHub's rate limit.
 
 **Tests added or updated:**
-[Which test files did you touch? What do they cover?]
+`tests/integration/test_github_tool.py` — rewritten to use the mock server, covering a successful fetch (with and without a README), repo-not-found (404), rate-limited (403), and malformed JSON. `tests/unit/test_github_tool.py` — new, covers input validation (missing `github_username`/`repo_name`) and the new `base_url` default/override behavior, no network involved.
 
-**Self-review confirmation:** [ ] make check passes [ ] make test-unit passes
+**Self-review confirmation:** [x] make check passes [x] make test-unit passes
+(Both in the documented pre-existing-failures sense: 181 lint errors and 53 unit test failures are pre-existing on `main` and unrelated to this issue; my changes introduce zero new failures, confirmed via before/after comparison.)
 
-**Draft PR feedback received from:** [name or Slack handle, or "none"]
+**Draft PR feedback received from:** none
