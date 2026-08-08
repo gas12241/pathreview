@@ -105,3 +105,33 @@ Made `GitHubTool`'s `base_url` configurable via an optional constructor param (d
 (Both in the documented pre-existing-failures sense: 181 lint errors and 53 unit test failures are pre-existing on `main` and unrelated to this issue; my changes introduce zero new failures, confirmed via before/after comparison.)
 
 **Draft PR feedback received from:** I put my draft up and was not able to get any feedback. Given the deadline for this assignment, I had Claude double check the PR and opened it for review.
+
+## Week 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:** [ ] Yes [x] No — still awaiting review
+
+**Summary of feedback:**
+No review came in.
+
+**How you responded:**
+
+---
+
+### Reflection
+
+**What was harder than you expected?**
+I think this was a mentally hard thing; when I found out that my code was not going to be an addition to, but something made from scratch, it did freak me out a little. The github responses, unit, and integration tests were all new files that were implemented alongside the plan. I was genuinely worried I would break something, to which I made sure that any tests that were failing, were doing so before I implemented my code. I guess this is to say that it was mentally hard, but it wasn't something hard in the sense that I got stuck on something specific.
+
+**What did you learn about working in a large codebase?**
+One thing that I do think is nice (when working in a large codebase), is that there are examples for some of the work you're about to do. For example, I know that a unit test was used as a stylistic reference for the unit test I made for the github_tool. There are also rules already made to follow when it comes to naming conventions. For example, how to name your branch correctly, or how to write your commit messages. I think that when you have a unifying way of doing small things, it probably makes it easier on the maintainer.
+
+**How did AI tools help — and where did they fall short?**
+AI was most useful in helping me make a plan. Given the context of the issue, as well as an already existing test, Claude was able to give me a plan that was easy to implement (after some questions were answered on my end). That plan was then easily implemented for week 9. I think somewhere where AI fell short was in the commit message when using git. For some reason, it took prompting Claude three times to get it to write commit messages in the appropriate style. I think the weird thing is that between the first and second try at writing a commit message, nothing changed. It was as if the prompt was useless and/or ignored. The third time ended up working, but even that prompt was extremely similar to the one before it.
+
+**What would you do differently if you started over?**
+I wish I would have started the implementation process a little earlier. I did put out my draft for my PR a day ahead of the soft deadline, and 3 days before the hard deadline, but that wasn't enough time for it to have gotten reviewed before I went through to finalize it. I would have like to have gotten feedback from a reviewer, and to do that, I needed to ahve started earlier. I did check the draft PR with Claude but it's not the same.
+
+**What are you most proud of from this module?**
+I think when we started this class, there was a specified importance on working on the plan. I think this module was this lesson personified. Because of the plan I spent some time working on early on, Claude had no problem creating the implementation. I genuinely think I had a harder time trying to figure out what I needed to do (through talking to Claude and looking through the codebase), than I did implementing the code. I guess I was proud when this happened because implementing solutions has always been something that makes me a little anxious, but this time it was a breeze.
